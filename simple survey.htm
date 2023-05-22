@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Students satisfaction survey
+		</title>
+		<style>
+			body {
+				text-align: center;
+			}
+			h1 {
+				font-size: 12;
+				color: white;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>
+			<b>
+				A survey on students satisfaction with prices  of items in the school shop.
+			</b>
+		</h1> <br>
+		<form>
+			<label for = 'schoolname'> which school do u go to? <br> </label> 
+			<input type = "text" id = "schoolname" name = "schoolname"> <br> 
+			<!-- // user places name of school above-->>
+			<label for="schooltime"> How many years have u been at that school? <br> </label>
+			<input type = "number" id="schooltime", name = "schooltime"> <br> 
+			<!--- user places how long they studied at that school above-->
+			<label for = "like rating">
+				How much do you like the prices in the school shop ?
+			</label>
+			<br>
+			<select id = "like rating" name = "like rating">
+				<option> Not at all </option>
+				<option> Barely </option>
+				<option> I am neutral </option>
+				<option> A little </option>
+				<option> A lot </option>
+			</select> <br>
+			<button type="button" onclick="newSubmit()">
+				Submit
+			</button>
+		</form>
+		<p id="finish"></p>
+		<script>
+			function newSubmit(){
+				let school = document.getElementById("schoolname").value, stime = document.getElementById("schooltime").value;
+				document.getElementById("finish").innerHTML = "Went to school at " + 
+					document.getElementById("schoolname").value + " for " + stime + "years";
+				alert("Thank u for your submission");
+			}
+		</script>
+	</body>
+
+</html>
