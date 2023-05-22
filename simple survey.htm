@@ -6,39 +6,44 @@
 		</title>
 		<style>
 			body {
-				text-align: center;
+				font-size: 12;
+				font-weight: bold;
+				background-color: aqua;
 			}
 			h1 {
-				font-size: 12;
-				color: white;
-				text-align: center;
+				font-size: 15;
+				color: aqua;
+				background-color: blue;
 			}
 		</style>
 	</head>
 	<body>
 		<h1>
 			<b>
-				A survey on students satisfaction with prices  of items in the school shop.
+				A survey on students satisfaction with prices  of items in their school's shop.
 			</b>
 		</h1> <br>
+		<p>
+			Thank you for taking time out of your day to participate in this survey. <br>
+		</p>
+		<hr>
 		<form>
 			<label for = 'schoolname'> which school do u go to? <br> </label> 
-			<input type = "text" id = "schoolname" name = "schoolname"> <br> 
-			<!-- // user places name of school above-->>
-			<label for="schooltime"> How many years have u been at that school? <br> </label>
-			<input type = "number" id="schooltime", name = "schooltime"> <br> 
+			<input type = "text" id = "schoolname" name = "schoolname"> <br> <br>
+			<!-- // user places name of school above-->
+			<label for="schooltime"> How many years have u been at that school? <br>  </label>
+			<input type = "number" id="schooltime", name = "schooltime"> <br> <br>
 			<!--- user places how long they studied at that school above-->
 			<label for = "like rating">
-				How much do you like the prices in the school shop ?
+				How much do you like the prices in the school shop? <br>
 			</label>
-			<br>
 			<select id = "like rating" name = "like rating">
 				<option> Not at all </option>
 				<option> Barely </option>
 				<option> I am neutral </option>
 				<option> A little </option>
 				<option> A lot </option>
-			</select> <br>
+			</select> <br> <br>
 			<button type="button" onclick="newSubmit()">
 				Submit
 			</button>
