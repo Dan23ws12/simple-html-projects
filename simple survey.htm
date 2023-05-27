@@ -8,7 +8,6 @@
 			body {
 				font-size: 12;
 				font-weight: bold;
-				background-color: aqua;
 			}
 			h1 {
 				font-size: 15;
@@ -20,13 +19,17 @@
 	<body>
 		<h1>
 			<b>
+				UofT MCSS Research Group.
+			</b>
+		</h1>
+		<hr>
+		<h2>
+			<b>
 				A survey on students satisfaction with prices  of items in their school's shop.
 			</b>
-		</h1> <br>
-		<p>
-			Thank you for taking time out of your day to participate in this survey. <br>
-		</p>
-		<hr>
+		</h2>
+		<button type="button" onclick="darkTheme()"> Dark theme </button> 
+		<br>
 		<form>
 			<label for = 'schoolname'> which school do u go to? <br> </label> 
 			<input type = "text" id = "schoolname" name = "schoolname"> <br> <br>
@@ -36,6 +39,7 @@
 			<!--- user places how long they studied at that school above-->
 			<label for = "like rating">
 				How much do you like the prices in the school shop? <br>
+			
 			</label>
 			<select id = "like rating" name = "like rating">
 				<option> Not at all </option>
@@ -48,15 +52,30 @@
 				Submit
 			</button>
 		</form>
-		<p id="finish"></p>
+		<p id="result"></p>
+		<p id = "finish"> </p>
 		<script>
+			var lightMode = 0;
+			function darkTheme(){
+				if (lightMode === 0){
+					document.body.style.backgroundColor = "black";
+					document.body.style.color = 'white';
+					lightMode = 1;
+				}
+				else {
+					document.body.style.backgroundColor = 'white';
+					document.body.style.color = "black";
+					lightMode = 0;
+				}
+			
+			}
+
 			function newSubmit(){
-				let school = document.getElementById("schoolname").value, stime = document.getElementById("schooltime").value;
-				document.getElementById("finish").innerHTML = "Went to school at " + 
-					document.getElementById("schoolname").value + " for " + stime + "years";
-				alert("Thank u for your submission");
+				document.getElementById("finish").innerHTML = 
+					"Thank you for taking time out of your day to participate in this survey.";
 			}
 		</script>
+		<!-- result format is 'Went to school at schoolname for stime years'-->
 	</body>
 
 </html>
