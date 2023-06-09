@@ -5,10 +5,78 @@
         A techinical Documentation page
     </title>
     <style>
-        
+        h1 {
+            font-size: 15;
+            text-align: center;
+            border: 12px;
+            border-style: double;
+            border-color: yellow;
+            background-color: blue;
+        }
+        p.welcome {
+            text-align: center;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            align-content: center;
+        }
+
+        body{
+            text-align: center;
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+        }
     </style>
  </head>
  <body>
-    
+    <h1>
+        DanzTheman's E-shop
+    </h1>
+    <p class="welcome">
+        Welcome to my internet shop. I hope you find what you're looking for.
+    </p>
+
+    <img src="images/watchpic1.jpg" alt="ball watch"> <br>
+    <button type="button" onclick="watch1()">
+        Ball Watch
+    </button>
+    <p id="watch_1"></p>
+    <br>
+
+    <img src="images/watch_pic2.jpg" alt="nike watch"> <br>
+    <button type="button" onclick="watch2()">
+        Nike Watch
+    </button>
+    <p id="watch_2"></p>
+    <br>
+
+    <img src="images/watch_pic3.jpg" alt="grmontre watch"> <br>
+    <button type="button" onclick="watch3()">
+        GrMontre Watch
+    </button>
+    <p id="watch_3"></p>
+
+    <script>
+        const items = [{inStock: 4, price: 10, ship: 4}, {inStock:10, price:18.7, ship: 2}, 
+        {inStock:2, price:19.92, ship: 2}];
+
+        function descriptionDisplay(des, pid){
+            document.getElementById(pid).innerHTML = "Amount in Stock: " + des.inStock + ", Price: $"
+                + des.price + ", Time it will take to ship: " + des.ship + " days";
+        }
+
+        function watch1(){
+            descriptionDisplay(items[0], "watch_1");
+        }
+
+        function watch2(){
+            descriptionDisplay(items[1], "watch_2");
+        }
+
+        function watch3(){
+            descriptionDisplay(items[2], "watch_3");
+        }
+    </script>
  </body>
 </html>
