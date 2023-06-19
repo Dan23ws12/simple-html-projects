@@ -38,7 +38,7 @@
 			<input type = "number" id="schooltime", name = "schooltime"> <br> <br>
 			<!--- user places how long they studied at that school above-->
 			<label for = "like rating">
-				How much do you like the prices in the school shop? <br>
+				How much do you like the prices in the school shop in general? <br>
 			
 			</label>
 			<select id = "like rating" name = "like rating">
@@ -48,12 +48,22 @@
 				<option> A little </option>
 				<option> A lot </option>
 			</select> <br> <br>
+			
+			<label for="bought item">What do u usually buy in the shop?</label>
+			<br> 
+			<input type="text" name="bought item" oninput="addLikeOption()">
+			<br> <br>
+
 			<button type="button" onclick="newSubmit()">
-				Submit
+				Submit survey form 
 			</button>
 		</form>
 		<p id="result"></p>
 		<p id = "finish"> </p>
+
+		<!-- newSubmit() does something when survey is submitted -->
+		<!-- darkTheme() changes between light theme and dark theme (changes page's background color)-->
+		<!-- addLikeOption() add's a like option when a user input's something they buy at the shop to be done -->
 		<script>
 			var lightMode = 0;
 			function darkTheme(){
@@ -70,12 +80,18 @@
 			
 			}
 
+		</script>
+
+		<script>
 			function newSubmit(){
 				document.getElementById("finish").innerHTML = 
 					"Thank you for taking time out of your day to participate in this survey.";
 			}
+
+			function addLikeOption(){
+				
+			}
 		</script>
-		<!-- result format is 'Went to school at schoolname for stime years'-->
 	</body>
 
 </html>
