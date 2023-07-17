@@ -1,0 +1,48 @@
+#header {
+    text-emphasis: none;
+    display: grid;
+    text-align: center;
+    grid-auto-flow: column;
+}
+
+#contact{
+    font-size: 12px;
+    font-family: Calibri;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: brown;
+    background-color: grey;
+} 
+
+#restaurant_name {
+    font-size: 45px;
+    font-family: ALGERIAN; 
+}
+
+#working_hours {
+    font-size: 12px;
+    font-family: Calibri;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: brown;
+    background-color: grey;
+}
+
+#welcome_statement{
+    background-image: url("../images/coffee.jpg");
+    background-size: 100% 150%;
+    font-size: 30px;
+    font-family: 'Arial Black', 'Arial Narrow Bold';
+    display: grid;
+    grid-auto-flow: column;
+}
+
+#top_products{
+    text-align: center;
+    font-weight: bold;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
