@@ -1,0 +1,13 @@
+img {
+    width: 100px;
+    height: 100px;
+}
+
+#products_dist_lst{
+    list-style: none;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: lighter;
+    display: grid;
+    grid-auto-flow: column;
+}

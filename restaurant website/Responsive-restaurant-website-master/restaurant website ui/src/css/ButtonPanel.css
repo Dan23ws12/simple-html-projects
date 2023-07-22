@@ -1,7 +1,0 @@
-ul, li{
-    display: grid;
-    list-style: none;
-    font-size: 14px;
-    grid-auto-flow: column;
-    
-}

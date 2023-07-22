@@ -1,0 +1,11 @@
+#pages{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#container{
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

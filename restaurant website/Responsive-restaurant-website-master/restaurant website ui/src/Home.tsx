@@ -1,9 +1,13 @@
 import './css/Home.css'
-import rest_logo from './images/rest_logo.png'
-import ButtonPanel from './ButtonPanel'
+import PagePanel from './PagePanel'
+import DisplayProducts from './DisplayProducts'
+import SocialMedia from './SocialMedia'
+
 
 function Home(){
-    
+    const topProdList = [ { name:"tiramisu", src: "images/tiramisu.jpg", price:20}, 
+        {name: "potato salad", src : "images/potato salad.jpg", price:15}, 
+        { name:"donut", src: "images/sprinkled donut.jpg", price:20} ]
 
     return <>
         <div id="header">
@@ -20,14 +24,16 @@ function Home(){
                 9:00am - 8:00pm
             </div>
         </div>
-        <ButtonPanel names={["About Us", "Products"]}/>
-        <div id="welcome_statement">
-            <p> Welcome to the world's best restaurant </p>
-            <img src={rest_logo} alt="restaurant logo" />
-        </div>
+        <PagePanel names={["About Us", "Products"]}/>
+        <p id="welcome_statement">
+            Welcome to the world's best restaurant <img src={"images/rest_logo.png"} alt="restaurant logo" />
+            <br /> <br /> <br />
+        </p> 
         <div id="top_products">
             <p><u> TOP PRODUCTS </u></p>
+            <DisplayProducts products={topProdList}></DisplayProducts>
         </div>
+        <SocialMedia />
     </>
 }
 

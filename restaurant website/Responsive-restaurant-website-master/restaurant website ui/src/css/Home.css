@@ -29,8 +29,8 @@
 }
 
 #welcome_statement{
-    background-image: url("../images/coffee.jpg");
-    background-size: 100% 150%;
+    background-image: url("images/vegies.png");
+    background-size: 100% 110%;
     font-size: 30px;
     font-family: 'Arial Black', 'Arial Narrow Bold';
     display: grid;
@@ -40,6 +40,11 @@
 #top_products{
     text-align: center;
     font-weight: bold;
+}
+
+#logo{
+    width: 100px;
+    height: 100px;
 }
 
 img{
